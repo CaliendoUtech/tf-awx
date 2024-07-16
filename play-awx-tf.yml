@@ -1,6 +1,6 @@
 ---
 - name: Cloner un dépôt Git
-  hosts: g0174sjcal
+  hosts: all
   tasks:
     - name: Git est installé
       apt:
