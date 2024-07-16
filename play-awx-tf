@@ -1,1 +1,16 @@
+---
+- name: Cloner un dépôt Git
+  hosts: g0174sjcal
+  tasks:
+    - name: Git est installé
+      apt:
+        name: git
+        state: present
+      become: yes
+
+    - name: Clonage
+      git:
+        repo: 'https://github.com/CaliendoUtech/tf-awx'
+        dest: /tmp
+        version: main
 
