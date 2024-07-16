@@ -1,16 +1,7 @@
 ---
-- name: Cloner un dépôt Git
+- name: Playbook msg
   hosts: all
   tasks:
-    - name: Git est installé
-      apt:
-        name: git
-        state: present
-      become: yes
-
-    - name: Clonage
-      git:
-        repo: 'https://github.com/CaliendoUtech/tf-awx'
-        dest: /tmp
-        version: main
-
+    - name: Afficher un message
+      debug:
+        msg: "J'affiche un message"
